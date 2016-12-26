@@ -16,7 +16,7 @@ export default class RestaurantItem extends Component{
     // console.log(typeof NavigatorHelper.getNav().pop);
   }
   render(){
-    let {title} = this.props;
+    let {title, image} = this.props;
     return(
 
       // <Image
@@ -35,7 +35,7 @@ export default class RestaurantItem extends Component{
       }}>
         <View style={[styles.divider, styles.container]}>
           <Image
-            source={require('../burger.png')}
+            source={image}
             resizeMode='cover'
             style={{height: null, width: null, flex: 1, flexDirection: 'row'}}
           >

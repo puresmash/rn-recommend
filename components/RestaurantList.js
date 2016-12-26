@@ -21,6 +21,11 @@ export default class RestaurantList extends Component{
     this.state = {
       dataSource: ds.cloneWithRows(['Burger','Noodles','Rice'])
     }
+    const map = new Map();
+    map.set('Burger', require('../burger.png'));
+    map.set('Noodles', require('../noodles.jpg'));
+    map.set('Rice', require('../rice.jpg'));
+    this.imageMap = map;
   }
   render(){
     return (
@@ -39,7 +44,7 @@ export default class RestaurantList extends Component{
     console.log(rowData);
     return(
       <RestaurantItem
-        image={'test'}
+        image={this.imageMap.get(rowData)}
         title={rowData}
       />
     );
