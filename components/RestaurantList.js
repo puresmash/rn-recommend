@@ -8,9 +8,9 @@ import {
   ListView
 } from 'react-native';
 
-import ResturantItem from './ResturantItem.js';
+import RestaurantItem from './RestaurantItem.js';
 
-export default class ResturantList extends Component{
+export default class RestaurantList extends Component{
 
   // static propTypes = {
   //   navigator: PropTypes.object.isRequired,
@@ -27,7 +27,7 @@ export default class ResturantList extends Component{
       <ListView
         dataSource={this.state.dataSource}
         renderRow={this._renderRow}
-        style={styles.resturantList}
+        style={styles.restaurantList}
         // {...this.props}
         />
       // Press Cmd+R to reload,{'\n'}
@@ -38,7 +38,7 @@ export default class ResturantList extends Component{
   _renderRow = (rowData)=>{
     console.log(rowData);
     return(
-      <ResturantItem
+      <RestaurantItem
         image={'test'}
         title={rowData}
       />
@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
     color: '#333333',
     marginBottom: 5,
   },
-  resturantList: {
+  restaurantList: {
     flex: 1,
     alignSelf: 'stretch',
     backgroundColor: '#AAAAAA',

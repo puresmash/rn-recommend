@@ -6,8 +6,8 @@ import {
   Navigator,
   TouchableHighlight
 } from 'react-native'
-import ResturantList from './ResturantList.js'
-import ResturantDetail from './ResturantDetail.js'
+import RestaurantList from './RestaurantList.js'
+import RestaurantDetail from './RestaurantDetail.js'
 import NavigatorHelper from '../utils/NavigatorHelper.js'
 
 export default class AppNavigator extends Component{
@@ -19,7 +19,7 @@ export default class AppNavigator extends Component{
 
   render() {
     const routes = [
-      {key: 'ResturantList', title: 'ResturantList', index: 0}
+      {key: 'RestaurantList', title: 'RestaurantList', index: 0}
     ];
     return <Navigator
       initialRoute={routes[0]}
@@ -76,15 +76,15 @@ export default class AppNavigator extends Component{
     let component = null
 
     switch(route.key) {
-      case 'ResturantList' :
+      case 'RestaurantList' :
         return (
-          <ResturantList />
+          <RestaurantList />
         );
       break
 
-      case 'ResturantDetail' :
+      case 'RestaurantDetail' :
         return(
-          <ResturantDetail choice={route.choice}/>
+          <RestaurantDetail choice={route.choice}/>
         );
       break
     }

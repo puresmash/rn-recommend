@@ -9,7 +9,7 @@ import {
   TouchableHighlight
 } from 'react-native';
 
-export default class ResturantDetail extends Component{
+export default class RestaurantDetail extends Component{
   constructor(props){
     super(props);
   }
@@ -24,7 +24,7 @@ export default class ResturantDetail extends Component{
           </View>
           <View style={styles.cardContent}>
             <Text>
-              This is the content about this resturant.{"\n"}
+              This is the content about this restaurant.{"\n"}
               This is the second line.{"\n"}
               This is the third line.{"\n"}
             </Text>

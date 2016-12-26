@@ -10,7 +10,7 @@ import {
 } from 'react-native';
 import NavigatorHelper from '../utils/NavigatorHelper.js'
 
-export default class ResturantItem extends Component{
+export default class RestaurantItem extends Component{
   constructor(props){
     super(props);
     // console.log(typeof NavigatorHelper.getNav().pop);
@@ -27,8 +27,8 @@ export default class ResturantItem extends Component{
       <TouchableHighlight onPress={()=>{
         console.log('123');
         NavigatorHelper.push({
-          key: 'ResturantDetail',
-          title: 'ResturantDetail',
+          key: 'RestaurantDetail',
+          title: 'RestaurantDetail',
           choice: title,
           index: 1
         })
