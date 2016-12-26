@@ -37,13 +37,15 @@ export default class RestaurantItem extends Component{
           <Image
             source={image}
             resizeMode='cover'
-            style={{height: null, width: null, flex: 1, flexDirection: 'row'}}
+            style={{height: null, width: null, flex: 1, flexDirection: 'row', backgroundColor: 'black'}}
           >
-            <View style={styles.titleContainer}>
-              <Text style={styles.title}>{title}</Text>
-            </View>
-            <View style={styles.arrowContainer}>
-              <Text style={styles.arrow}>{'>'}</Text>
+            <View style={styles.overlay}>
+              <View style={styles.titleContainer}>
+                <Text style={styles.title}>{title}</Text>
+              </View>
+              <View style={styles.arrowContainer}>
+                <Text style={styles.arrow}>{'>'}</Text>
+              </View>
             </View>
           </Image>
         </View>
@@ -63,6 +65,12 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     flexDirection: 'row',
+    // opacity: 0.5,
+  },
+  overlay: {
+    flex: 1,
+    flexDirection: 'row',
+    backgroundColor: 'rgba(255,255,255,0.5)',
   },
   titleContainer: {
     flex: 5,
@@ -70,7 +78,6 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
     alignItems: 'center',
     alignSelf: 'stretch',
-
     // paddingLeft: 16,
     // paddingTop: 32,
     // paddingBottom: 32,
@@ -79,9 +86,10 @@ const styles = StyleSheet.create({
   title: {
     // flex: 5,
     paddingLeft: 16,
-    paddingTop: 32,
-    paddingBottom: 32,
+    marginTop: 32,
+    marginBottom: 32,
     backgroundColor: 'transparent',
+    // backgroundColor: 'rgba(255,255,255,0.5)',
     fontSize: 24,
   },
   arrowContainer: {
@@ -90,8 +98,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     alignSelf: 'stretch',
-    backgroundColor: 'orange',
-    opacity: 0.3,
+    backgroundColor: 'rgba(0,0,0,0.1)',
   },
   arrow: {
     textAlign: 'right',
