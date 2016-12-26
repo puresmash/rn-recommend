@@ -34,9 +34,10 @@ const styles = StyleSheet.create({
     backgroundColor: '#EEEEEE',
     margin: 8,
     borderWidth: 1,
-    borderRadius: 5,
+    borderRadius: 2,
     flex: 1,
     maxHeight: 350,
+    overflow: 'hidden',
   },
   text: {
     flex: 1,
