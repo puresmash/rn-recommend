@@ -8,6 +8,7 @@ import {
   Image,
   TouchableHighlight
 } from 'react-native';
+import NavigatorHelper from '../utils/NavigatorHelper.js'
 
 export default class RestaurantDetail extends Component{
   constructor(props){
@@ -17,6 +18,7 @@ export default class RestaurantDetail extends Component{
     const { choice } = this.props;
     console.log(choice);
     return (
+
       <View style={styles.container}>
         <View style={styles.cards}>
           <View style={styles.cardHeader}>
@@ -30,8 +32,18 @@ export default class RestaurantDetail extends Component{
             </Text>
           </View>
           <View style={styles.cardFooter}>
-            <Button title="button"></Button>
-            <Button title="button"></Button>
+            <Button
+              title="Edit"
+              onPress={()=>{
+                NavigatorHelper.push({
+                  key: 'RestaurantEdit',
+                  title: 'RestaurantEdit',
+                  choice: choice,
+                  index: 2
+                });
+              }}
+            />
+            <Button title="Cancel"></Button>
           </View>
 
         </View>
@@ -69,7 +81,6 @@ const styles = StyleSheet.create({
     paddingTop: 16,
     paddingLeft: 16,
     paddingRight: 16,
-    fontSize: 14,
   },
   cardFooter: {
     flex: 1,
@@ -78,6 +89,5 @@ const styles = StyleSheet.create({
     paddingBottom: 24,
     paddingLeft: 8,
     paddingRight: 8,
-    fontSize: 14,
   },
 });

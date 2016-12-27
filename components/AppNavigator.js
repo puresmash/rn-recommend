@@ -8,6 +8,7 @@ import {
 } from 'react-native'
 import RestaurantList from './RestaurantList.js'
 import RestaurantDetail from './RestaurantDetail.js'
+import RestaurantEdit from './RestaurantEdit.js'
 import NavigatorHelper from '../utils/NavigatorHelper.js'
 
 export default class AppNavigator extends Component{
@@ -85,6 +86,12 @@ export default class AppNavigator extends Component{
       case 'RestaurantDetail' :
         return(
           <RestaurantDetail choice={route.choice}/>
+        );
+      break
+
+      case 'RestaurantEdit' :
+        return(
+          <RestaurantEdit choice={route.choice}/>
         );
       break
     }

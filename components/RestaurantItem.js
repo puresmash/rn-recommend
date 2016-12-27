@@ -8,7 +8,10 @@ import {
   Image,
   TouchableHighlight
 } from 'react-native';
+import Icon from 'react-native-vector-icons/Ionicons'
 import NavigatorHelper from '../utils/NavigatorHelper.js'
+import Constants from '../constants'
+const {Colors} = Constants;
 
 export default class RestaurantItem extends Component{
   constructor(props){
@@ -44,7 +47,9 @@ export default class RestaurantItem extends Component{
                 <Text style={styles.title}>{title}</Text>
               </View>
               <View style={styles.arrowContainer}>
-                <Text style={styles.arrow}>{'>'}</Text>
+              <Icon name="ios-arrow-forward"
+                color={Colors.light0}
+                size={24}/>
               </View>
             </View>
           </Image>
@@ -103,10 +108,5 @@ const styles = StyleSheet.create({
   arrow: {
     textAlign: 'right',
     fontSize: 24,
-    // flex: 3,
-    // justifyContent: 'flex-end',
-    // alignItems: 'flex-end',
-    // alignSelf: 'flex-end'
-
   }
 });
