@@ -1,3 +1,10 @@
 {
-"presets": ["react-native"]
+  "presets": ["react-native"],
+  "plugins": [
+    ["module-alias", [
+        { "src": "./constants", "expose": "@const" },
+        { "src": "./actions", "expose": "@actions" },
+    ]]
+  ]
+
 }

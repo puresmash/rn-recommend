@@ -1,0 +1,11 @@
+const actionTypes = {
+
+  // restaurant
+  UPD_RESTAURANT : 'UPD_RESTAURANT',
+  UPD_RESTAURANT_NAME : 'UPD_RESTAURANT_NAME',
+  UPD_RESTAURANT_DESC : 'UPD_RESTAURANT_DESC',
+  LOAD_RESTAURANT : 'LOAD_RESTAURANT',
+
+}
+
+export default actionTypes;

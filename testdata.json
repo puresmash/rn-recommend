@@ -1,0 +1,28 @@
+{
+  "Burger":[
+    {
+      "id": "b1",
+      "name": "Bravo Burger",
+      "description": "A Nice Burger Restaurant."
+    },
+    {
+      "id": "b2",
+      "name": "Fenny Burger",
+      "description": "A Nice Burger Restaurant."
+    }
+  ],
+  "Noodles":[
+    {
+      "id": "n1",
+      "name": "Bravo Noodles",
+      "description": "A Nice Noodles Restaurant."
+    }
+  ],
+  "Rice":[
+    {
+      "id": "r1",
+      "name": "Bravo Rice",
+      "description": "A Nice Rice Restaurant."
+    }
+  ]
+}

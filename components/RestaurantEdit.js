@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import {
   AppRegistry,
   StyleSheet,
@@ -11,11 +11,25 @@ import {
 } from 'react-native';
 import NavigatorHelper from '../utils/NavigatorHelper.js';
 
-export default class RestaurantEdit extends Component{
+// dispatch
+import Actions from '../actions';
+import {connect} from 'react-redux';
+
+class RestaurantEdit extends Component{
+
+  static propTypes = {
+      rid: PropTypes.string.isRequired
+  };
+
   constructor(props){
     super(props);
+    // this.state = {
+    //   editName =
+    // }
   }
   render(){
+    const {dispatch, rid, restaurantMap} = this.props;
+
     return(
       <View style={styles.container}>
         <View style={styles.subheader}>
@@ -26,6 +40,12 @@ export default class RestaurantEdit extends Component{
             style={styles.textInput}
             editable={true}
             maxLength= {16}
+            onChange={(event)=>{
+              let name = event.nativeEvent.text;
+              dispatch(Actions.UpdRestaurantName(rid, name));
+            }}
+            value={restaurantMap.get(rid).name}
+            placeholder={"Insert Restaurant Name"}
           />
         </View>
         <View style={styles.subheader}>
@@ -36,6 +56,11 @@ export default class RestaurantEdit extends Component{
             style={styles.textInput}
             editable={true}
             multiline={true}
+            value={restaurantMap.get(rid).description}
+            onChange={(event)=>{
+              let desc = event.nativeEvent.text;
+              dispatch(Actions.UpdRestaurantDesc(rid, desc));
+            }}
           />
         </View>
       </View>
@@ -87,3 +112,17 @@ const styles = StyleSheet.create({
     // height: 16,
   },
 });
+
+function mapStateToProps(state){
+  const { restaurantMap } = state.restaurant;
+  console.log(state);
+  return {
+    restaurantMap
+  };
+}
+
+// function mapDispatchToProps(dispatch){
+//
+// }
+
+export default connect(mapStateToProps)(RestaurantEdit);
