@@ -9,8 +9,8 @@ import {
   TouchableHighlight
 } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons'
-import NavigatorHelper from '../utils/NavigatorHelper.js'
-import Constants from '../constants'
+import NavigatorHelper from '@utils/NavigatorHelper.js'
+import Constants from '@const'
 const {Colors} = Constants;
 
 export default class RestaurantItem extends Component{

@@ -9,7 +9,7 @@ import {
   TouchableHighlight
 } from 'react-native';
 
-import NavigatorHelper from '../utils/NavigatorHelper.js'
+import NavigatorHelper from '@utils/NavigatorHelper.js'
 
 export default class RestaurantCard extends Component{
   constructor(props){

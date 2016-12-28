@@ -10,7 +10,7 @@ import {
 import {createStore, applyMiddleware, combineReducers} from 'redux';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
-import * as reducers from '../reducers';
+import * as reducers from '@reducers';
 const reducer = combineReducers(reducers);
 const store = createStore(
   reducer, applyMiddleware(thunk)
@@ -19,9 +19,9 @@ const store = createStore(
 import RestaurantList from './RestaurantList.js'
 import RestaurantDetail from './RestaurantDetail.js'
 import RestaurantEdit from './RestaurantEdit.js'
-import NavigatorHelper from '../utils/NavigatorHelper.js'
+import NavigatorHelper from '@utils/NavigatorHelper.js'
 import Data from '../testdata.json';
-import Actions from '../actions';
+import Actions from '@actions';
 
 export default class AppNavigator extends Component{
 

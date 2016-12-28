@@ -9,10 +9,10 @@ import {
   Image,
   TouchableHighlight
 } from 'react-native';
-import NavigatorHelper from '../utils/NavigatorHelper.js';
+import NavigatorHelper from '@utils/NavigatorHelper.js';
 
 // dispatch
-import Actions from '../actions';
+import Actions from '@actions';
 import {connect} from 'react-redux';
 
 class RestaurantEdit extends Component{

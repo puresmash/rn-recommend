@@ -8,7 +8,7 @@ import {
   Image,
   TouchableHighlight
 } from 'react-native';
-import NavigatorHelper from '../utils/NavigatorHelper.js'
+import NavigatorHelper from '@utils/NavigatorHelper.js'
 import RestaurantCard from './RestaurantCard.js'
 
 import {connect} from 'react-redux';

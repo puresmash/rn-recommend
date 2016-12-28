@@ -22,9 +22,9 @@ export default class RestaurantList extends Component{
       dataSource: ds.cloneWithRows(['Burger','Noodles','Rice'])
     }
     const map = new Map();
-    map.set('Burger', require('../burger.png'));
-    map.set('Noodles', require('../noodles.jpg'));
-    map.set('Rice', require('../rice.jpg'));
+    map.set('Burger', require('@images/burger.png'));
+    map.set('Noodles', require('@images/noodles.jpg'));
+    map.set('Rice', require('@images/rice.jpg'));
     this.imageMap = map;
   }
   render(){
